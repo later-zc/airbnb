@@ -1,0 +1,24 @@
+@import "./variables.less";
+
+// 这里比写 * 通配符选择器，要性能好一丢丢，因为有些元素我们可能根本就不会用到
+// 但是如果写 * ，就会对所有的元素应用，浪费一点点的性能
+body, button, dd, dl, dt, form, h1, h2, h3, h4, h5, h6, hr, input, li, ol, p, pre, td, textarea, th, ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: @textColor;
+  text-decoration: none;
+}
+
+
+img {
+  vertical-align: top;
+}
+
+ul, li {
+  list-style: none;
+}
+
+
