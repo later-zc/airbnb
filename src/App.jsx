@@ -10,6 +10,7 @@ const App = memo(() => {
 
   return (
     <div className='app'>
+      <h2>哈哈</h2>
       <AppHeader/>
       <Suspense fallback="loading">
         <div className='page'>
