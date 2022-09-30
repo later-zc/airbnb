@@ -1,5 +1,5 @@
 # Front-end technology stack
-React、less、Redux、React Router、styled-components、mui、antd
+ Front-end technology stack: React、less、Redux、React Router、styled-components、mui、antd
 
 # Getting Started with Create React App
 
