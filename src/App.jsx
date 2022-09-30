@@ -1,17 +1,22 @@
-import React, { memo } from 'react'
+import React, { memo, Suspense } from 'react'
 import { useRoutes } from 'react-router-dom'
-
-import router from '@/router'
-
+import AppFooter from './components/app-footer'
+import AppHeader from './components/app-header'
+import useScrollTop from './hooks/useScrollTop'
+import routes from './router'
 
 const App = memo(() => {
+  useScrollTop()
+
   return (
-    <div className="app">
-      <div className="header">header</div>
-      <div className="page">
-        {useRoutes(router)}
-      </div>
-      <div className="footer">footer</div>
+    <div className='app'>
+      <AppHeader/>
+      <Suspense fallback="loading">
+        <div className='page'>
+          {useRoutes(routes)}
+        </div>
+      </Suspense>
+      <AppFooter/>
     </div>
   )
 })

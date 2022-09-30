@@ -1,14 +1,16 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom'
+// import Demo from "@/views/demo"
+import React from "react"
+import { Navigate } from "react-router-dom"
 
-const Home = React.lazy(() => import('@/views/home'))
-const Entire = React.lazy(() => import('@/views/entire'))
-const Detail = React.lazy(() => import('@/views/detail'))
+const Home = React.lazy(() => import("@/views/home"))
+// import Home from "@/views/home"
+const Entire = React.lazy(() => import("@/views/entire"))
+const Detail = React.lazy(() => import("@/views/detail"))
 
-const router = [
+const routes = [
   {
-    path: "",
-    element: <Navigate to="/home" />
+    path: "/",
+    element: <Navigate to="/home"/>
   },
   {
     path: "/home",
@@ -21,7 +23,11 @@ const router = [
   {
     path: "/detail",
     element: <Detail/>
-  }
+  },
+  // {
+  //   path: "/demo",
+  //   element: <Demo/>
+  // }
 ]
 
-export default router
+export default routes

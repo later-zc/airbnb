@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL, timeout } from "./config"
+import { BASE_URL, TIMEOUT } from "./config"
 
 class Request {
   constructor(baseURL, timeout) {
@@ -29,4 +29,4 @@ class Request {
   }
 }
 
-export default new Request(BASE_URL, timeout)
+export default new Request(BASE_URL, TIMEOUT)
