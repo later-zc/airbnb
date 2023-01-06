@@ -10,14 +10,12 @@ const HomeLongfor = memo((props) => {
 
   return (
     <LongforWrapper>
-      <SectionHeader title={infoData.title} subtitle={infoData.subtitle}/>
-      <div className='longfor-list'>
+      <SectionHeader title={infoData.title} subtitle={infoData.subtitle} />
+      <div className="longfor-list">
         <ScrollView>
-          {
-            infoData.list.map(item => {
-              return <LongforItem itemData={item} key={item.city}/>
-            })
-          }
+          {infoData.list.map((item) => {
+            return <LongforItem itemData={item} key={item.city} />
+          })}
         </ScrollView>
       </div>
     </LongforWrapper>
@@ -25,7 +23,7 @@ const HomeLongfor = memo((props) => {
 })
 
 HomeLongfor.propTypes = {
-  infoData: PropTypes.object
+  infoData: PropTypes.object,
 }
 
 export default HomeLongfor
